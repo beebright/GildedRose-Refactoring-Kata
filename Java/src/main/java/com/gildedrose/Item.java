@@ -35,36 +35,4 @@ public class Item {
     }
   }
 
-  protected void updateAgedBrie() {
-    sellIn = sellIn - 1;
-    increaseQuality();
-    if (sellIn < 0) {
-      increaseQuality();
-    }
-  }
-
-  protected void updateBackstage() {
-    sellIn = sellIn - 1;
-    increaseQuality();
-
-    if (sellIn < 10) {
-      increaseQuality();
-    }
-
-    if (sellIn < 5) {
-      increaseQuality();
-    }
-
-    if (sellIn < 0) {
-      quality = 0;
-    }
-  }
-
-  protected void updateNormalItem() {
-    sellIn = sellIn - 1;
-    decreaseQuality();
-    if (sellIn < 0) {
-      decreaseQuality();
-    }
-  }
 }
